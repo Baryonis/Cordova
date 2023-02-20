@@ -1,0 +1,8 @@
+body {
+    display: flex;
+    flex-flow: column nowrap;
+
+    & > * {
+        font-size: 0.5rem;
+    }
+}
