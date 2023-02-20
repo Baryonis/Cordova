@@ -9,24 +9,88 @@
       content="initial-scale=1, width=device-width, viewport-fit=cover"
     />
     <meta name="color-scheme" content="light dark" />
-    <link rel="stylesheet" href="scss/index.scss" />
-    <title>TP Menu Pizza</title>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"
+    />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <title>TP Menu Pizzas</title>
   </head>
   <body>
-    <div class="pizzas">
-      <div class="pizza">
-        <p>Fromages</p>
-        <p>(emmental, oignon)</p>
+    <ion-menu content-id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Pizza's Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        <a href="#" class="menu_link">Accueil</a>
+        <a href="#" class="menu_link">Contact</a>
+      </ion-content>
+    </ion-menu>
+
+    <div class="ion-page" id="main-content">
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content class="ion-padding">
+        <h1>Menu pizzas</h1>
+
+        <div class="error"></div>
+  
+        <form class="form-add-pizza">
+          <ion-input
+            type="text"
+            name="name"
+            placeholder="Nom de la pizza"
+            autocomplete="off"
+          ></ion-input>
+
+          <ion-input
+            type="text"
+            name="ingredients"
+            placeholder="Ingrédients"
+            autocomplete="off"
+          ></ion-input>
+          
+          <button type="submit">Go !</button>
+        </form>
+  
+        <div class="pizzas">
+          <div class="pizza">
+            <h3>Fromages</h3>
+            <p>(emmental, oignon)</p>
+          </div>
+          <div class="pizza">
+            <h3>Chèvre chaud</h3>
+            <p>(chèvre, jambon, emmental, olives)</p>
+          </div>
+          <div class="pizza">
+            <h3>Sicilienne</h3>
+            <p>(oigons, câpres, emmental, olives)</p>
+          </div>
+        </div>
       </div>
-      <div class="pizza">
-        <p>Chèvre chaud</p>
-        <p>(chèvre, jambon, emmental, olives)</p>
-      </div>
-      <div class="pizza">
-        <p>Sicilienne</p>
-        <p>(oigons, câpres, emmental, olives)</p>
-      </div>
-    </div>
+      </ion-content>
+
+     
 
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
