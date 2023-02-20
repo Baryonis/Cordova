@@ -5,8 +5,8 @@ body {
     padding: 30px;
 }
     
-  body > * {
-      padding-bottom: 5px;
+body > * {
+    padding-bottom: 5px;
 }
   
 .form-add-pizza {
@@ -15,26 +15,34 @@ body {
 }
     
 .form-add-pizza > * {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
+    border: black 1px solid;
 }
 
 .form-add-pizza [type=submit] {
-      border: 1px solid black;
-      padding: 8px;
+    color: black;
+    border: none;
+    padding: 8px;
 }
   
 .pizzas {
     min-width: 350px;
 }
+
+.pizza h3 {
+    margin-top: 25px;
+}
     
-.pizza > p:first-of-type {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-bottom: -15px;
+.pizza p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 .menu_link {
     display: flex;
     text-decoration: none;
+    color: #221818;
+    margin-top: 10px;
 }
 

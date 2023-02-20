@@ -11,14 +11,20 @@ function onDeviceReady() {
     const ingredients = formAddPizza.ingredients.value;
 
     if (isValid(pizzaName) && isValid(ingredients)) {
-      const pizzaTag = document.createElement("div");
-      pizzaTag.className = "pizza";
+      const pizzaTag = document.createElement("ion-accordeon");
+      pizzaTag.className =
+        "pizza md accordion-animated hydrated accordion-collapsed";
       pizzaTag.innerHTML = `
-        <h3>${capitalizeFirstLetter(pizzaName)}</h3>
-        <p>(${formatIngredients(ingredients)})</p>
+      <ion-item slot="header" color="light">
+        <ion-label>${capitalizeFirstLetter(pizzaName)}</ion-label>
+      </ion-item>
+
+      <div class="ion-padding" slot="content">
+        (${formatIngredients(ingredients)})
+      </div>
       `;
 
-      pizzasTag.insertBefore(pizzaTag, pizzasTag.firstElementChild);
+      pizzasTag.insertBefore(pizzaTag, pizzasTag.lastChild);
 
       formAddPizza.reset();
     } else {

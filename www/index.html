@@ -26,69 +26,94 @@
     <title>TP Menu Pizzas</title>
   </head>
   <body>
-    <ion-menu content-id="main-content">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Pizza's Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+    <ion-app>
+        <ion-menu content-id="main-content">
+        <ion-header>
+            <ion-toolbar>
+            <ion-title>Pizza's Menu</ion-title>
+            </ion-toolbar>
+        </ion-header>
 
-      <ion-content class="ion-padding">
-        <a href="#" class="menu_link">Accueil</a>
-        <a href="#" class="menu_link">Contact</a>
-      </ion-content>
-    </ion-menu>
+        <ion-content class="ion-padding">
+            <ion-nav-link href="#" class="menu_link">Accueil</ion-nav-link>
+            <ion-nav-link href="#" class="menu_link">Contact</ion-nav-link>
+        </ion-content>
+        </ion-menu>
 
-    <div class="ion-page" id="main-content">
+        <div class="ion-page" id="main-content">
 
-      <ion-header>
-        <ion-toolbar>
-          <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-          </ion-buttons>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
+        <ion-header>
+            <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>Pizzas</ion-title>
+            </ion-toolbar>
+        </ion-header>
 
-      <ion-content class="ion-padding">
-        <h1>Menu pizzas</h1>
+        <ion-content class="ion-padding">
 
-        <div class="error"></div>
-  
-        <form class="form-add-pizza">
-          <ion-input
-            type="text"
-            name="name"
-            placeholder="Nom de la pizza"
-            autocomplete="off"
-          ></ion-input>
+            <div class="error"></div>
 
-          <ion-input
-            type="text"
-            name="ingredients"
-            placeholder="Ingrédients"
-            autocomplete="off"
-          ></ion-input>
-          
-          <button type="submit">Go !</button>
-        </form>
-  
-        <div class="pizzas">
-          <div class="pizza">
-            <h3>Fromages</h3>
-            <p>(emmental, oignon)</p>
-          </div>
-          <div class="pizza">
-            <h3>Chèvre chaud</h3>
-            <p>(chèvre, jambon, emmental, olives)</p>
-          </div>
-          <div class="pizza">
-            <h3>Sicilienne</h3>
-            <p>(oigons, câpres, emmental, olives)</p>
-          </div>
+            <ion-card>
+                <ion-card-header>
+                  <ion-card-title>Ajouter une pizza !</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    <form class="form-add-pizza">
+                        <ion-input
+                            type="text"
+                            name="name"
+                            placeholder="Nom de la pizza"
+                            autocomplete="off"
+                        ></ion-input>
+            
+                        <ion-input
+                            type="text"
+                            name="ingredients"
+                            placeholder="Ingrédients"
+                            autocomplete="off"
+                        ></ion-input>
+            
+                        <ion-button type="submit">Go !</ion-button>
+                        </form>
+                </ion-card-content>
+              </ion-card>
+              
+              <ion-accordion-group class="pizzas">
+
+                <ion-accordion value="first" class="pizza">
+                  <ion-item slot="header" color="light">
+                    <ion-label>Fromage</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    (emmental, oignon)
+                  </div>
+                </ion-accordion>
+
+                <ion-accordion value="second" class="pizza">
+                  <ion-item slot="header" color="light">
+                    <ion-label>Chèvre chaud</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    (chèvre, jambon, emmental, olives)
+                  </div>
+                </ion-accordion>
+
+                <ion-accordion value="third" class="pizza">
+                  <ion-item slot="header" color="light">
+                    <ion-label>Sicilienne</ion-label>
+                  </ion-item>
+                  <div class="ion-padding" slot="content">
+                    (oigons, câpres, emmental, olives)
+                  </div>
+                </ion-accordion>
+
+              </ion-accordion-group>
         </div>
-      </div>
       </ion-content>
+    </ion-app>
 
      
 
