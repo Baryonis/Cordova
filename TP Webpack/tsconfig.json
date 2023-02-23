@@ -1,0 +1,20 @@
+{
+    "include": ["./src/index.ts"],
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "outDir": "out/src",
+        "lib": [
+            "es6",
+            "DOM"
+        ],
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "skipLibCheck": true,
+    },
+    "exclude": [
+        "node_modules",
+        "tests",
+        ".vscode-test"
+    ]
+}
