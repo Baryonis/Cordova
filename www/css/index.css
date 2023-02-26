@@ -9,40 +9,6 @@ body > * {
     padding-bottom: 5px;
 }
   
-.form-add-pizza {
+.ion-padding ion-nav {
     display: flex;
-    flex-flow: column nowrap;
 }
-    
-.form-add-pizza > * {
-    margin-bottom: 10px;
-    border: black 1px solid;
-}
-
-.form-add-pizza [type=submit] {
-    color: black;
-    border: none;
-    padding: 8px;
-}
-  
-.pizzas {
-    min-width: 350px;
-}
-
-.pizza h3 {
-    margin-top: 25px;
-}
-    
-.pizza p {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-.menu_link {
-    display: flex;
-    text-decoration: none;
-    color: #221818;
-    margin-top: 10px;
-}
-

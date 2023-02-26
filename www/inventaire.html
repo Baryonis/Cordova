@@ -8,7 +8,6 @@
       name="viewport"
       content="initial-scale=1, width=device-width, viewport-fit=cover"
     />
-    <meta name="color-scheme" content="light dark" />
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
@@ -30,13 +29,13 @@
       <ion-menu content-id="main-content">
         <ion-header>
           <ion-toolbar>
-            <ion-title>Accueil</ion-title>
+            <ion-title>Inventaire</ion-title>
           </ion-toolbar>
         </ion-header>
 
         <ion-content class="ion-padding">
-          <a href="#">Accueil</a>
-          <a href="./inventaire.html">Inventaire</a>
+          <a href="./index.html">Accueil</a>
+          <a href="#">Inventaire</a>
           <a href="./contact.html">Contact</a>
         </ion-content>
       </ion-menu>
@@ -47,15 +46,41 @@
             <ion-buttons slot="start">
               <ion-menu-button></ion-menu-button>
             </ion-buttons>
-            <ion-title>Accueil</ion-title>
+            <ion-title>Inventaire</ion-title>
           </ion-toolbar>
         </ion-header>
 
-        <ion-content class="ion-padding">
-          <div class="error"></div>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Ajouter un objet !</ion-card-title>
+          </ion-card-header>
 
-          <h1>Bienvenue sur cette Application</h1>
-        </ion-content>
+          <ion-card-content>
+            <form class="form-add-object">
+              <ion-input
+                type="text"
+                name="name"
+                placeholder="Nom de l'objet"
+                autocomplete="off"
+              ></ion-input>
+
+              <ion-input
+                type="text"
+                name="description"
+                placeholder="Description"
+                autocomplete="off"
+              ></ion-input>
+
+              <ion-button type="submit">Ajouter</ion-button>
+            </form>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-list class="objects">
+          <ion-item value="first" class="object">
+            <ion-label>Marteau (objet pour taper des clous)</ion-label>
+          </ion-item>
+        </ion-list>
       </div>
     </ion-app>
 
